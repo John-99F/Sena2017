@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".inicio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+<TextView
+    android:id="@+id/Marca"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="marca"
+    android:textColor="@color/dark"
+    android:textSize="15dp"
+    />
+    <TextView
+        android:id="@+id/Placa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:text="Placa"
+        android:textColor="@color/dark"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/soap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Renovacion del Soap"
+        android:textColor="@color/dark"
+        android:textSize="15dp"
+        />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/Marca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="marca"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/Placa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:text="Placa"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/soap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Renovacion del Soap"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

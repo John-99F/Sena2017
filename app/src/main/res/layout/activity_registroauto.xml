@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".Registroauto">
+
+   <include
+       android:id="@+id/bar"
+       layout="@layout/bar"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="158dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Registro del Auto"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/spinners"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginRight="68dp" />
+
+    <Spinner
+        android:id="@+id/spinners2"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinners"
+        android:layout_marginRight="68dp" />
+
+    <Spinner
+        android:id="@+id/spinners3"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        android:layout_marginRight="68dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Marca"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Color"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginLeft="16dp" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="286dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde"
+        android:ems="10"
+        android:hint="Placa"
+        android:inputType="text"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinners2" />
+
+    <TextView
+        android:id="@+id/ciudad"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Ciudad"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        android:layout_marginLeft="16dp" />
+
+
+    <EditText
+        android:id="@+id/modelo"
+        android:layout_width="286dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde"
+        android:ems="10"
+        android:hint="Modelo"
+        android:inputType="number"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinners3" />
+
+    <EditText
+        android:id="@+id/Soat"
+        android:layout_width="286dp"
+        android:layout_height="36dp"
+        android:background="@drawable/borde"
+        android:ems="10"
+        android:hint="Fecha Soat"
+        android:inputType="date"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modelo"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="40dp"
+        android:text="Guardar"
+        android:textColor="#000000"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Soat" />
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="165dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/Competicion"
+        android:textColor="@color/dark"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guardar" />
+
+    <TextView
+        android:id="@+id/Des1"
+        android:layout_width="176dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/desarrollador1"
+        android:textColor="@color/dark"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Des2" />
+
+    <TextView
+        android:id="@+id/Des2"
+        android:layout_width="249dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/desarollador2"
+        android:textColor="@color/dark"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

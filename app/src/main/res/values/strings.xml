@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">Senasoft2017</string>
+    <string name="app_name">TramiAutos</string>
     <string name="Descripcion">Esta aplicacion tiene como funcion brindar un soporte en el manejo automotor mostrando datos de vital importancia
                                como el soat o los distintos impuestos y cada cuanto se debe pagar... </string>
     <string name="Competicion">SENASOFT 2017</string>
     <string name="desarrollador1">John Fredy Muñoz Topa</string>
     <string name="desarollador2">Lening Santiago Sanchez Parada</string>
+    <string name="title_activity_nav">nav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
 </resources>
