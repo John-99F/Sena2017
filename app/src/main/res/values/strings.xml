@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Senasoft2017</string>
+    <string name="Descripcion">Esta aplicacion tiene como funcion brindar un soporte en el manejo automotor mostrando datos de vital importancia
+                               como el soat o los distintos impuestos y cada cuanto se debe pagar... </string>
+    <string name="Competicion">SENASOFT 2017</string>
+    <string name="desarrollador1">John Fredy Muñoz Topa</string>
+    <string name="desarollador2">Lening Santiago Sanchez Parada</string>
 </resources>

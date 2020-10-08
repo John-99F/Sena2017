@@ -8,25 +8,26 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="172dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="166dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Descripcion"
-        android:layout_width="270dp"
-        android:layout_height="87dp"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
         android:layout_marginTop="8dp"
         android:text="@string/Descripcion"
         android:textColor="@color/dark"
         android:textSize="13dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
@@ -34,13 +35,13 @@
         android:id="@+id/Registrarse"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:text="Registrarse"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintHorizontal_bias="0.399"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
@@ -48,11 +49,11 @@
         android:id="@+id/Perfil"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="24dp"
         android:text="Mi Perfil"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.582"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
@@ -60,12 +61,13 @@
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="84dp"
         android:text="@string/Competicion"
         android:textColor="@color/dark"
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
