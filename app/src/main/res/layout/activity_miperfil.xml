@@ -1,161 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-
-    tools:context=".Miperfil">
-
-
-    <include
-        android:id="@+id/bar"
-        layout="@layout/bar"
-        android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        />
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bar"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            app:titleTextColor="#ffffff"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            ></androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="348dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/borde"
+            android:ems="10"
+            android:hint="Nombre Completos"
+            android:inputType="text"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+        <EditText
+            android:id="@+id/textView2"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/borde"
+            android:hint="Fecha de Nacimiento"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nombre"/>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="76dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginLeft="248dp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/borde"
+            android:src="@drawable/ic_baseline_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Correo"
+            android:layout_width="348dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/borde"
+            android:ems="10"
+            android:hint="Correo Electronico"
+            android:inputType="text"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/Vencimiento"
+            android:layout_width="212dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/borde"
+            android:hint="Vencimiento de Fecha de Nacimiento"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nombre" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="74dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="276dp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/borde"
+            android:src="@drawable/ic_baseline_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="239dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_gravity="center"
+            android:text="Guardar Registro Conductor"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Vencimiento"
+            android:onClick="g"/>
 
 
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="348dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/borde"
-        android:ems="10"
-        android:hint="Nombre Completos"
-        android:inputType="text"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar" />
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="165dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="center"
+            android:text="@string/Competicion"
+            android:textColor="@color/dark"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <EditText
-        android:id="@+id/textView2"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/borde"
-        android:hint="Fecha de Nacimiento"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nombre"/>
+        <TextView
+            android:id="@+id/Des1"
+            android:layout_width="176dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:text="@string/desarrollador1"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Des2" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginLeft="248dp"
-        android:layout_marginTop="176dp"
-        android:background="@drawable/borde"
-        android:src="@drawable/ic_baseline_calendar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/Correo"
-        android:layout_width="348dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/borde"
-        android:ems="10"
-        android:hint="Correo Electronico"
-        android:inputType="text"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/Vencimiento"
-        android:layout_width="212dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="212dp"
-        android:background="@drawable/borde"
-        android:hint="Vencimiento de Fecha de Nacimiento"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nombre" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="74dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="276dp"
-        android:layout_marginLeft="276dp"
-        android:layout_marginTop="320dp"
-        android:background="@drawable/borde"
-        android:src="@drawable/ic_baseline_calendar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="36dp"
-        android:text="Guardar Registro Conductor"
-        android:textColor="#000000"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Vencimiento"
-        android:onClick="g"/>
+        <TextView
+            android:id="@+id/Des2"
+            android:layout_width="249dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="@string/desarollador2"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
 
 
-    <TextView
-        android:id="@+id/title1"
-        android:layout_width="165dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/Competicion"
-        android:textColor="@color/dark"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <TextView
-        android:id="@+id/Des1"
-        android:layout_width="176dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/desarrollador1"
-        android:textColor="@color/dark"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Des2" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/Des2"
-        android:layout_width="249dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/desarollador2"
-        android:textColor="@color/dark"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title1" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/nav_header_main"
+        android:fitsSystemWindows="true">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

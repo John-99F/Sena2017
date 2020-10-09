@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawerl"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".Registroauto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".Registroauto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bar"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            app:titleTextColor="#ffffff"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            ></androidx.appcompat.widget.Toolbar>
 
-   <include
-       android:id="@+id/bar"
-       layout="@layout/bar"
-       android:layout_height="wrap_content"
-       android:layout_width="match_parent"
-       />
 
     <TextView
         android:id="@+id/textView3"
@@ -21,74 +28,90 @@
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:text="Registro del Auto"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar"
         android:layout_marginLeft="16dp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="85dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:text="Marca"
+            android:textColor="#020202"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_marginLeft="16dp" />
 
     <Spinner
         android:id="@+id/spinners"
         android:layout_width="214dp"
         android:layout_height="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="-35dp"
+   android:layout_marginStart="110dp"
         android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:layout_marginRight="68dp" />
-
+        android:layout_marginRight="68dp"
+        android:layout_marginLeft="90dp" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="85dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Color"
+            android:textColor="#020202"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:layout_marginLeft="16dp" />
     <Spinner
         android:id="@+id/spinners2"
         android:layout_width="214dp"
         android:layout_height="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginStart="110dp"
         android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinners"
-        android:layout_marginRight="68dp" />
-
+        android:layout_marginRight="68dp"
+        android:layout_marginLeft="110dp" />
+        <TextView
+            android:id="@+id/ciudad"
+            android:layout_width="85dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Ciudad"
+            android:textColor="#020202"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombre"
+            android:layout_marginLeft="16dp" />
     <Spinner
         android:id="@+id/spinners3"
         android:layout_width="214dp"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginStart="110dp"
         android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombre"
         android:layout_marginRight="68dp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Marca"
-        android:textColor="#020202"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:layout_marginLeft="16dp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Color"
-        android:textColor="#020202"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginLeft="16dp" />
+
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/placa"
         android:layout_width="286dp"
         android:layout_height="36dp"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/borde"
         android:ems="10"
         android:hint="Placa"
@@ -97,27 +120,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinners2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinners2"
+        android:layout_marginLeft="20dp" />
 
-    <TextView
-        android:id="@+id/ciudad"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Ciudad"
-        android:textColor="#020202"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        android:layout_marginLeft="16dp" />
 
 
     <EditText
         android:id="@+id/modelo"
         android:layout_width="286dp"
         android:layout_height="36dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/borde"
         android:ems="10"
         android:hint="Modelo"
@@ -126,12 +139,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinners3" />
+        app:layout_constraintTop_toBottomOf="@+id/spinners3"
+        android:layout_marginLeft="20dp" />
 
     <EditText
         android:id="@+id/Soat"
         android:layout_width="286dp"
         android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/borde"
         android:ems="10"
         android:hint="Fecha Soat"
@@ -142,13 +158,15 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modelo"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.06"
+        android:layout_marginLeft="20dp" />
 
     <Button
         android:id="@+id/guardar"
         android:layout_width="271dp"
         android:layout_height="59dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:text="Guardar"
         android:textColor="#000000"
         android:textStyle="italic"
@@ -161,6 +179,7 @@
         android:layout_width="165dp"
         android:layout_height="25dp"
         android:layout_marginTop="48dp"
+        android:layout_gravity="center"
         android:text="@string/Competicion"
         android:textColor="@color/dark"
         android:textSize="20sp"
@@ -175,6 +194,7 @@
         android:layout_width="176dp"
         android:layout_height="18dp"
         android:layout_marginTop="12dp"
+        android:layout_gravity="center"
         android:text="@string/desarrollador1"
         android:textColor="@color/dark"
         android:textSize="15dp"
@@ -188,7 +208,8 @@
         android:id="@+id/Des2"
         android:layout_width="249dp"
         android:layout_height="23dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
         android:text="@string/desarollador2"
         android:textColor="@color/dark"
         android:textSize="15dp"
@@ -197,7 +218,17 @@
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title1" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/nav_header_main"
+        android:fitsSystemWindows="true">
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

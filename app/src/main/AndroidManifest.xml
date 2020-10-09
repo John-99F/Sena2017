@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Registroauto"></activity>
+        <activity android:name=".servicios"></activity>
+        <activity android:name=".splash" />
+        <activity android:name=".Registroauto" />
         <activity android:name=".Miperfil" />
         <activity
             android:name=".nav"

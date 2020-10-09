@@ -7,36 +7,74 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import kotlinx.android.synthetic.main.activity_inicio.*
+import kotlinx.android.synthetic.main.activity_miperfil.*
+import kotlinx.android.synthetic.main.activity_miperfil.nav
+
 
 class Miperfil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_miperfil)
+        bar("Activiy First")
+        init()
 
-        val title=findViewById<TextView>(R.id.title)
-        setSupportActionBar(findViewById(R.id.bar))
-
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_dehaze_24)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
-        title.text="Mi Perfil"
     }
-    //para ejecutar el menu
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu,menu)
-        return true
+    fun bar(title: String){
+        setSupportActionBar(bar)
+
+        var b:ActionBar? =supportActionBar
+
+        if(b !=null){
+            b.setHomeAsUpIndicator(R.drawable.ic_baseline_dehaze_24)
+            b.setDisplayHomeAsUpEnabled(true)
+            b.title=title
+        }
     }
 
-    //Genera acciones
+    fun init(){
+        nav.setNavigationItemSelectedListener {item->
+            when(item.itemId){
+                R.id.inicio->{
+                    val i= Intent(this, inicio::class.java)
+                    startActivity(i) }
+                R.id.miPerfil->{
+                    var i= Intent(this, Miperfil::class.java)
+                    startActivity(i)}
+                R.id.acerca->{
+                    Toast.makeText(this,"Acerca",Toast.LENGTH_LONG).show()}
+                R.id.servicios->{
+                    var i= Intent(this, servicios::class.java)
+                    startActivity(i)
+                }
+                R.id.registro->{
+                    Toast.makeText(this,"Habilitado muy pronto",Toast.LENGTH_LONG).show()
+                }
+                R.id.salir->{
+                    Toast.makeText(this,"Saliendo...",Toast.LENGTH_LONG).show()
+                }
+
+
+            }
+            false
+        }
+
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return true
+        when(item.itemId){
+            android.R.id.home->
+                drawerl.openDrawer(GravityCompat.START)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
-    fun g(view: View) {
-        var i= Intent(this, Registroauto::class.java)
-        startActivity(i)
-
     }
 
-}
+
+
+

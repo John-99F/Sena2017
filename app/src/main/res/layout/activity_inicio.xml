@@ -1,193 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawerl1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".inicio">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".inicio"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            app:titleTextColor="#ffffff"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            ></androidx.appcompat.widget.Toolbar>
 
-    <include
-        android:id="@+id/bar"
-        layout="@layout/bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/titleEvent"
+        <TextView
+            android:id="@+id/titleEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="Proximos EVENTOS"
+            android:textColor="@color/dark"
+            android:textSize="13dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recicler"
+            android:layout_gravity="center"
+            android:layout_width="346dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleEvent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/placa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="110dp"
+                android:text="Placa"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Renovacion Soap"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recicler1"
+            android:layout_width="346dp"
+            android:layout_gravity="center"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recicler">
+
+            <TextView
+                android:id="@+id/marca1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/placa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="110dp"
+                android:text="Placa"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/other1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Revision TecnoMecanica"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recicler2"
+            android:layout_gravity="center"
+            android:layout_width="346dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recicler1">
+
+            <TextView
+                android:id="@+id/marca2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/placa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="110dp"
+                android:text="Placa"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/other2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Pago del impuesto Vehicular"
+                android:textColor="@color/dark"
+                android:textSize="15dp"
+                android:textStyle="italic" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:text="@string/Competicion"
+            android:textColor="@color/dark"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recicler1" />
+
+        <TextView
+            android:id="@+id/Des1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+
+            android:text="@string/desarrollador1"
+            android:textColor="@color/dark"
+            android:textSize="12dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Des2" />
+
+        <TextView
+            android:id="@+id/Des2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:text="@string/desarollador2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Title"
+            android:textColor="@color/dark"
+            android:textStyle="italic"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Proximos EVENTOS"
-        android:textColor="@color/dark"
-        android:textSize="13dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/recicler"
-        android:layout_width="346dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marca"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/placa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginLeft="110dp"
-            android:text="Placa"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Renovacion Soap"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-    </androidx.cardview.widget.CardView>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/nav_header_main"
+        android:fitsSystemWindows="true">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/recicler1"
-        android:layout_width="346dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recicler">
-
-        <TextView
-            android:id="@+id/marca1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marca"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/placa1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginLeft="110dp"
-            android:text="Placa"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/other1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Revision TecnoMecanica"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/recicler2"
-        android:layout_width="346dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recicler1">
-
-        <TextView
-            android:id="@+id/marca2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marca"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/placa2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginLeft="110dp"
-            android:text="Placa"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/other2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Pago del impuesto Vehicular"
-            android:textColor="@color/dark"
-            android:textSize="15dp"
-            android:textStyle="italic" />
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
-        android:text="@string/Competicion"
-        android:textColor="@color/dark"
-        android:textSize="20dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recicler1" />
-
-    <TextView
-        android:id="@+id/Des1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/desarrollador1"
-        android:textColor="@color/dark"
-        android:textSize="12dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Des2" />
-
-    <TextView
-        android:id="@+id/Des2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/desarollador2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Title"
-        android:textColor="@color/dark"
-        android:textStyle="italic"
-        android:textSize="12dp"/>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

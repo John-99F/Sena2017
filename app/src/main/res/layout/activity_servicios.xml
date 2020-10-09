@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bar"
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            app:titleTextColor="#ffffff"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            ></androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="158dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="SERVICIOS"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bar" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="292dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Renovacion SOAT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="292dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="Revisión Tecno mecánica"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="287dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Pago de Impuesto Vehicular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="287dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="Pico y Placa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch3" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="165dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="160dp"
+            android:layout_gravity="center"
+            android:text="@string/Competicion"
+            android:textColor="@color/dark"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch4" />
+
+        <TextView
+            android:id="@+id/Des1"
+            android:layout_width="176dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:text="@string/desarrollador1"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Des2" />
+
+        <TextView
+            android:id="@+id/Des2"
+            android:layout_width="249dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="@string/desarollador2"
+            android:textColor="@color/dark"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/nav_header_main"
+        android:fitsSystemWindows="true">
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
