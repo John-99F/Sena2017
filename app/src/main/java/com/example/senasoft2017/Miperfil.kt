@@ -1,28 +1,74 @@
 package com.example.senasoft2017
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import com.example.myaplication2.AdminSQLiteOpenHelper
 import kotlinx.android.synthetic.main.activity_inicio.*
 import kotlinx.android.synthetic.main.activity_miperfil.*
 import kotlinx.android.synthetic.main.activity_miperfil.nav
 
 
 class Miperfil : AppCompatActivity() {
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_miperfil)
-        bar("Activiy First")
+
+        var id=findViewById<EditText>(R.id.numero)
+        var Nom=findViewById<EditText>(R.id.nombre)
+        var Nacimiento=findViewById<EditText>(R.id.fechaNa)
+        var Correos=findViewById<EditText>(R.id.Correo)
+        var Expedicionlicencia=findViewById<TextView>(R.id.Vencimiento)
+        bar("Mi Perfil")
         init()
 
+button2.setOnClickListener {
+    val admin = AdminSQLiteOpenHelper(this, "senasof", null, 3)
+    val bd = admin.writableDatabase
+    val fila = bd.rawQuery("select *from Usuarios where id=${id.text}",null)
+    if (fila.moveToFirst()) {
+        val registro = ContentValues()
+        registro.put("Nombres", Nom.getText().toString())
+        registro.put("FechaNacimiento", Nacimiento.getText().toString())
+        registro.put("Correo", Correos.getText().toString())
+        registro.put("Vecimienlicencia", Expedicionlicencia.getText().toString())
+        val cant = bd.update("Usuarios", registro, "id=${id.text.toString()}", null)
+        bd.close()
+        if (cant == 1){
+            Toast.makeText(this, "Registro Actualizado", Toast.LENGTH_SHORT).show()
+        }
+    } else {
+        val registro = ContentValues()
+        registro.put("id", id.getText().toString())
+        registro.put("Nombres", Nom.getText().toString())
+        registro.put("FechaNacimiento", Nacimiento.getText().toString())
+        registro.put("Correo", Correos.getText().toString())
+        registro.put("Vecimienlicencia", Expedicionlicencia.getText().toString())
+        bd.insert("Usuarios", null, registro)
+        bd.close()
+        id.setText("")
+        Nom.setText("")
+        Nacimiento.setText("")
+        Correos.setText("")
+        Expedicionlicencia.setText("")
+        Toast.makeText(this, "“NUEVO REGISTRO GUARDADO” ", Toast.LENGTH_SHORT).show()
+
+}
+    }
     }
     fun bar(title: String){
         setSupportActionBar(bar)
@@ -73,7 +119,14 @@ class Miperfil : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+
     }
+
+
+
+
+
+
 
 
 
